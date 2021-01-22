@@ -105,6 +105,13 @@ open class AnimatedField: UIView {
 			textView.inputAccessoryView = accessoryView
 		}
 	}
+    
+    /// The input view for text field
+    public var fieldInputView: UIView? {
+        didSet {
+            textField.inputView = fieldInputView
+        }
+    }
 	
     /// Field type (default values)
     public var type: AnimatedFieldType = .none {
